@@ -8,13 +8,49 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
+    <EditText
+        android:id="@+id/martknr-text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="46dp"
+        android:ems="10"
+        android:hint="Ihre Eingabe"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/ausgabefeld"
+        app:layout_constraintStart_toStartOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/button-senden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:onClick="buttonOnClick"
+        android:text="ABSCHICKEN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ausgabefeld" />
+
+    <EditText
+        android:id="@+id/ausgabefeld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="237dp"
+        android:ems="10"
+        android:hint="Antwort vom Server"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/martknr-text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:text="@string/eingabe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

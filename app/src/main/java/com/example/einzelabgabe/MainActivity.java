@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,5 +50,21 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void buttonOnClick(View v){
+
+        String martikelnummer;
+
+       
+        EditText eingabe= (EditText)findViewById(R.id.martknr_text);
+        EditText ausgabe= (EditText)findViewById(R.id.ausgabefeld);
+
+
+        martikelnummer= (eingabe.getText().toString());
+        ausgabe.setText(martikelnummer);
+
+
+
     }
 }
